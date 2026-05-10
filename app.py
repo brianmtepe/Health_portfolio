@@ -13,7 +13,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Invisible HTML tags for social sharing thumbnail
+# Meta tags for social sharing thumbnail
 st.markdown(f"""
     <head>
         <meta property="og:title" content="Brian Mtepe | Health Data Analyst Portfolio" />
@@ -200,6 +200,16 @@ for idx, (p, d) in enumerate(projects):
 # =========================================================
 # FOOTER
 # =========================================================
+st.markdown("---")
+st.markdown(
+    "<div style='text-align:center;opacity:0.6;'>Healthcare Portfolio | Remote Global Availability | 2026</div>",
+    unsafe_allow_html=True
+)==========================
+st.markdown("---")
+st.markdown(
+    "<div style='text-align:center;opacity:0.6;'>Healthcare Portfolio | Remote Global Availability | 2026</div>",
+    unsafe_allow_html=True
+)==========================
 st.markdown("---")
 st.markdown(
     "<div style='text-align:center;opacity:0.6;'>Healthcare Portfolio | Remote Global Availability | 2026</div>",
