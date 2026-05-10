@@ -1,0 +1,21 @@
+# --- Python Specific ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# --- Streamlit Specific ---
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# --- Data & Junk ---
+*.csv
+*.xlsx
+.ipynb_checkpoints/
+*.ipynb
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
