@@ -14,17 +14,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Metadata for social sharing (WhatsApp/LinkedIn)
-st.markdown(f"""
-    <head>
-        <meta property="og:title" content="Brian Mtepe | Health Data Analyst Portfolio" />
-        <meta property="og:description" content="Registered Nurse (KRCHN) & Data Analyst bridging clinical nursing with data-driven insights." />
-        <meta property="og:image" content="https://raw.githubusercontent.com/brianmtepe/Health_portfolio/main/Health-portfolio-thumbnail.png" />
-        <meta property="og:url" content="https://brian-mtepe-health.streamlit.app" />
-        <meta property="og:type" content="website" />
-    </head>
-""", unsafe_allow_html=True)
-
 # =========================================================
 # PROFESSIONAL STYLE
 # =========================================================
@@ -95,9 +84,6 @@ projects = [
     ("📉 Outpatient Trend Analysis", "Operational reporting on service utilization, patient flows, and clinic volume.")
 ]
 
-# =========================================================
-# SYNTHETIC DATA GENERATION
-# =========================================================
 @st.cache_data
 def get_data():
     np.random.seed(42)
@@ -112,14 +98,11 @@ def get_data():
 df = get_data()
 
 # =========================================================
-# SHARE URL
+# SIDEBAR (HIRE & CONNECT)
 # =========================================================
 live_url = "https://brian-mtepe-health.streamlit.app"
 whatsapp_message = quote(f"Check out Brian Mtepe's Clinical Data Portfolio: {live_url}")
 
-# =========================================================
-# SIDEBAR (HIRE & CONNECT)
-# =========================================================
 with st.sidebar:
     st.header("💼 Hire & Connect")
     st.markdown('<a href="https://www.upwork.com/freelancers/~0177726359560f722c" class="nav-card">🚀 Hire on Upwork</a>', unsafe_allow_html=True)
@@ -152,9 +135,6 @@ c3.metric("Live Clinical Projects", len(projects))
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# =========================================================
-# VISUALIZATION
-# =========================================================
 st.subheader("📈 Cumulative Growth of Health Outreach")
 chart_data = df.groupby("Project", as_index=False)["Records"].sum()
 fig = px.bar(
@@ -198,6 +178,8 @@ for idx, (project_name, description) in enumerate(projects):
 # =========================================================
 # FOOTER
 # =========================================================
+st.markdown("---")
+st.markdown("<div style='text-align:center;opacity:0.6;'>Healthcare Portfolio | Remote Global Availability | 2026</div>", unsafe_allow_html=True)============================
 st.markdown("---")
 st.markdown("<div style='text-align:center;opacity:0.6;'>Healthcare Portfolio | Remote Global Availability | 2026</div>", unsafe_allow_html=True)True
 )
