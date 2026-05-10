@@ -13,6 +13,17 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Invisible HTML tags that WhatsApp/LinkedIn read to show your screenshot
+st.markdown(f"""
+    <head>
+        <meta property="og:title" content="Brian Mtepe | Health Data Analyst Portfolio" />
+        <meta property="og:description" content="Registered Nurse (KRCHN) & Data Analyst bridging clinical nursing with data-driven healthcare insights." />
+        <meta property="og:image" content="https://github.com/brianmtepe/Health_portfolio/blob/main/Health-portfolio-thumbnail.png?raw=true" />
+        <meta property="og:url" content="https://brian-mtepe-health.streamlit.app" />
+        <meta property="og:type" content="website" />
+    </head>
+""", unsafe_allow_html=True)
+
 # =========================================================
 # PROFESSIONAL STYLE
 # =========================================================
@@ -106,7 +117,7 @@ with st.sidebar:
     
     st.divider()
     st.write("📢 **Share My Portfolio**")
-    live_url = "https://brian-mtepe-health-data.streamlit.app" 
+    live_url = "https://brian-mtepe-health.streamlit.app" 
     whatsapp_msg = f"Check out Brian Mtepe's Clinical Data Portfolio: {live_url}"
     st.markdown(f'<a href="https://wa.me/?text={whatsapp_msg}" class="nav-card">📲 Share via WhatsApp</a>', unsafe_allow_html=True)
     
